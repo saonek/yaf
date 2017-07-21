@@ -2,7 +2,7 @@
 use Yaf\Controller_Abstract;
 use Yaf\Dispatcher;
 use Ts\BaseModel;
-
+use Medoo\Medoo;
 // use App\Models\BaseModel;
 class IndexController extends Controller_Abstract{
      
@@ -90,7 +90,8 @@ class IndexController extends Controller_Abstract{
             echo 1111111;
         }
         echo $mm;
-
+        $Medoo =  new Medoo;
+        print_r($Medoo);
         return FALSE;
     }
 }
