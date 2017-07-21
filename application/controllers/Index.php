@@ -72,7 +72,14 @@ class IndexController extends Controller_Abstract{
         print_r($router);
         print_r($router->getCurrentRoute());
         print_r($router->getRoutes());
-        
+        //print_r($this->getRequest());
+        //echo $this->getRequest()->getParam('ident');
         exit();
+    }
+
+    public function getpAction(){
+        print_r($this->getRequest());
+        echo $this->getRequest()->getParam('ident');
+        exit;
     }
 }
