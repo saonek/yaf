@@ -2,9 +2,12 @@
 use Yaf\Controller_Abstract;
 use Yaf\Dispatcher;
 use Ts\BaseModel;
+
 // use App\Models\BaseModel;
 class IndexController extends Controller_Abstract{
      
+
+
     public function indexAction(){
         $arr = [
                     [
@@ -78,8 +81,16 @@ class IndexController extends Controller_Abstract{
     }
 
     public function getpAction(){
-        print_r($this->getRequest());
-        echo $this->getRequest()->getParam('ident');
-        exit;
+        //http://yaf.myapp/?s=index/getp&ss=1
+        //获取url参数
+        //代表了一个实际的Http请求, 一般的不用自己实例化它, Yaf_Application在run以后会自动根据当前请求实例它
+        //在PHP5.3之后, 打开yaf.use_namespace的情况下, 也可以使用 Yaf\Request_Http
+        $mm = $this->getRequest()->getQuery('ss',88);
+        if($this->getRequest()->isGet()){
+            echo 1111111;
+        }
+        echo $mm;
+
+        return FALSE;
     }
 }
