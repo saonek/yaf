@@ -1,4 +1,5 @@
 <?php
+namespace db;
 /*!
  * Medoo database framework
  * https://medoo.in
@@ -8,7 +9,7 @@
  * Released under the MIT license
  */
 
-namespace Medoo;
+//namespace Medoo;
 
 use PDO;
 use Exception;
